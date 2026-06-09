@@ -5,7 +5,8 @@ import { Layout } from "@/components/Layout";
 import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { fetchProducts } from "@/lib/shopify";
-import heroImg from "@/assets/hero-nails.jpg";
+import heroAsset from "@/assets/hero-nails-new.jpg.asset.json";
+const heroImg = heroAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
