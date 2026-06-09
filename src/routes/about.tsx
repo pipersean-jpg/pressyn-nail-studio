@@ -28,8 +28,8 @@ function AboutPage() {
         <p className="mt-6 text-lg leading-relaxed text-foreground/90">
           {"\n"}
         </p>
-        <p className="mt-6 text-lg leading-relaxed text-foreground/90">
-          welcome ayla to PRESSYNSTUDIO.CO as our model Can’t wait for ayla to have the best experience here with us!! She is getting sent a Pressyn package every month to model and create beautiful content 💅 DM or email me to have this same amazing experience as ayla 🤍🙌&nbsp;
+        <p className="mt-6 text-lg leading-relaxed text-foreground/90 whitespace-pre-wrap">
+          welcome ayla to PRESSYNSTUDIO.CO as our model Can’t wait for ayla to have the best experience here with us!! She is getting sent a Pressyn package every month to model and create beautiful content 💅 DM or email me to have this same amazing experience as ayla 🤍🙌&nbsp;{"\n\n\n\n\n\n\n\n"}
         </p>
       </section>
     </Layout>
