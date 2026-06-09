@@ -27,7 +27,7 @@ function AboutPage() {
         <p className="text-lg leading-relaxed text-foreground/90 whitespace-pre-wrap">
           HI MY NAME IS ELYCE!! 👋 I am the founder and owner of PRESSYNSTUDIO.CO!&nbsp; Pressyn is a place where people can get press-on nails at their finesse✨ DM me on instagram to begin your journey with us and have the best experience, deals and more 😉 Enjoy beautiful, refined nails from the comfort of your home! I believe that nails should feel refined, simple, and elevated — made to fit and match into everyday outfits and life while still feeling special. every set is crafted to look salon-quality, minus the salon. 💅💕
         </p>
-        <figure className="mt-8">
+        <figure className="mt-8 max-w-md mx-auto">
           <img
             src={elyceAsset.url}
             alt="Elyce, founder of Pressynstudio.co"
