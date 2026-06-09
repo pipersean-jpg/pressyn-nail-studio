@@ -22,14 +22,14 @@ function AboutPage() {
         </div>
       </section>
       <section className="max-w-3xl mx-auto px-4 py-16 prose prose-neutral">
-        <p className="text-lg leading-relaxed text-foreground/90">
-          Pressynstudio.co was born from a love of beautiful, effortless beauty. Every set is hand-painted in our studio with the kind of detail you'd expect from your favourite salon — minus the chair time.
+        <p className="text-lg leading-relaxed text-foreground/90 whitespace-pre-wrap">
+          HI MY NAME IS ELYCE!! 👋 I am the founder and owner of PRESSYNSTUDIO.CO!&nbsp; Pressyn is a place where people can get press-on nails at their finesse✨ DM me on instagram to begin your journey with us and have the best experience, deals and more 😉 Enjoy beautiful, refined nails from the comfort of your home! I believe that nails should feel refined, simple, and elevated — made to fit and match into everyday outfits and life while still feeling special. every set is crafted to look salon-quality, minus the salon. 💅💕
         </p>
         <p className="mt-6 text-lg leading-relaxed text-foreground/90">
-          We believe in luxury that's reusable, kind to your natural nails, and ready when you are. From a quiet morning to your most important night, Pressyn is here for the moment.
+          {"\n"}
         </p>
         <p className="mt-6 text-lg leading-relaxed text-foreground/90">
-          Each set ships in our signature soft-pink and gold packaging, with everything you need to apply, wear, and reuse.
+          welcome ayla to PRESSYNSTUDIO.CO as our model Can’t wait for ayla to have the best experience here with us!! She is getting sent a Pressyn package every month to model and create beautiful content 💅 DM or email me to have this same amazing experience as ayla 🤍🙌&nbsp;
         </p>
       </section>
     </Layout>
