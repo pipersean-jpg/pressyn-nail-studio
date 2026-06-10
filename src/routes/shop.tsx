@@ -3,6 +3,16 @@ import { useQuery } from "@tanstack/react-query";
 import { Layout } from "@/components/Layout";
 import { ProductCard } from "@/components/ProductCard";
 import { fetchProducts } from "@/lib/shopify";
+import shop1 from "@/assets/shop-1.png.asset.json";
+import shop2 from "@/assets/shop-2.png.asset.json";
+import shop3 from "@/assets/shop-3.png.asset.json";
+import shop4 from "@/assets/shop-4.png.asset.json";
+import shop5 from "@/assets/shop-5.png.asset.json";
+import shop6 from "@/assets/shop-6.png.asset.json";
+import shop7 from "@/assets/shop-7.png.asset.json";
+import shop8 from "@/assets/shop-8.png.asset.json";
+import shop9 from "@/assets/shop-9.png.asset.json";
+const collectionImages = [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9].map((a) => a.url);
 
 export const Route = createFileRoute("/shop")({
   head: () => ({
@@ -35,6 +45,13 @@ function ShopPage() {
         </div>
       </section>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6 mb-16">
+          {collectionImages.map((src, i) => (
+            <div key={i} className="aspect-square overflow-hidden rounded-lg bg-blush/30">
+              <img src={src} alt={`Collection look ${i + 1}`} className="h-full w-full object-cover" loading="lazy" />
+            </div>
+          ))}
+        </div>
         {isLoading ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {Array.from({ length: 8 }).map((_, i) => (
