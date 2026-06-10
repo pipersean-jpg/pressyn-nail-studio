@@ -7,6 +7,11 @@ import { Button } from "@/components/ui/button";
 import { fetchProducts } from "@/lib/shopify";
 import heroAsset from "@/assets/hero-nails-new.jpg.asset.json";
 const heroImg = heroAsset.url;
+import best1 from "@/assets/best-1.png.asset.json";
+import best2 from "@/assets/best-2.png.asset.json";
+import best3 from "@/assets/best-3.png.asset.json";
+import best4 from "@/assets/best-4.png.asset.json";
+const bestSellerImages = [best1.url, best2.url, best3.url, best4.url];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -90,19 +95,13 @@ function HomePage() {
           <Link to="/shop" className="hidden sm:inline text-sm tracking-wide text-primary hover:underline">View all →</Link>
         </div>
 
-        {isLoading ? (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="aspect-[4/5] rounded-lg bg-blush/30 animate-pulse" />
-            ))}
-          </div>
-        ) : products.length === 0 ? (
-          <EmptyProducts />
-        ) : (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
-            {products.slice(0, 8).map((p) => <ProductCard key={p.node.id} product={p} />)}
-          </div>
-        )}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+          {bestSellerImages.map((src, i) => (
+            <div key={i} className="aspect-[4/5] overflow-hidden rounded-lg bg-blush/30">
+              <img src={src} alt={`Best seller ${i + 1}`} className="h-full w-full object-cover" loading="lazy" />
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* EDITORIAL BAND */}
