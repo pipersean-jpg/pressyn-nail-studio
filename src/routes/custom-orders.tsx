@@ -6,14 +6,18 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 
 const schema = z.object({
   name: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
-  shape: z.string().trim().min(1).max(50),
-  length: z.string().trim().min(1).max(50),
+  shape: z.enum(["Coffin", "Almond", "Seletto"]),
+  length: z.enum(["Short", "Medium", "Long"]),
   design: z.string().trim().min(1).max(2000),
+}).refine((d) => d.shape !== "Seletto" || d.length === "Long", {
+  message: "Seletto is available in Long only",
+  path: ["length"],
 });
 
 export const Route = createFileRoute("/custom-orders")({
@@ -33,7 +37,7 @@ function CustomPage() {
     e.preventDefault();
     const result = schema.safeParse(form);
     if (!result.success) {
-      toast.error("Please fill in every field", { position: "top-center" });
+      toast.error(result.error.issues[0]?.message || "Please fill in every field", { position: "top-center" });
       return;
     }
     toast.success("Custom request sent — we'll be in touch within 48 hours.", { position: "top-center" });
@@ -66,11 +70,25 @@ function CustomPage() {
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="shape">Preferred shape</Label>
-              <Input id="shape" placeholder="Almond, coffin, square…" value={form.shape} onChange={(e) => setForm({ ...form, shape: e.target.value })} maxLength={50} />
+              <Select value={form.shape} onValueChange={(v) => setForm({ ...form, shape: v, length: v === "Seletto" ? "Long" : form.length })}>
+                <SelectTrigger id="shape"><SelectValue placeholder="Select shape" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Coffin">Coffin</SelectItem>
+                  <SelectItem value="Almond">Almond</SelectItem>
+                  <SelectItem value="Seletto">Seletto (long only)</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
             <div>
               <Label htmlFor="length">Preferred length</Label>
-              <Input id="length" placeholder="Short, medium, long" value={form.length} onChange={(e) => setForm({ ...form, length: e.target.value })} maxLength={50} />
+              <Select value={form.length} onValueChange={(v) => setForm({ ...form, length: v })}>
+                <SelectTrigger id="length"><SelectValue placeholder="Select length" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Short" disabled={form.shape === "Seletto"}>Short</SelectItem>
+                  <SelectItem value="Medium" disabled={form.shape === "Seletto"}>Medium</SelectItem>
+                  <SelectItem value="Long">Long</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
           </div>
           <div>
