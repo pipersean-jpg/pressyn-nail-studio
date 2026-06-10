@@ -25,7 +25,10 @@ function AboutPage() {
       </section>
       <section className="max-w-3xl mx-auto px-4 py-16 prose prose-neutral">
         <p className="text-lg leading-relaxed text-foreground/90 whitespace-pre-wrap">
-          HI MY NAME IS ELYCE!! 👋 I am the founder and owner of PRESSYNSTUDIO.CO!&nbsp; Pressyn is a place where people can get press-on nails at their finesse✨ DM me on instagram to begin your journey with us and have the best experience, deals and more 😉 Enjoy beautiful, refined nails from the comfort of your home! I believe that nails should feel refined, simple, and elevated — made to fit and match into everyday outfits and life while still feeling special. every set is crafted to look salon-quality, minus the salon. 💅💕
+          Hi, My Name Is Elyce! 👋{"\n\n"}
+          I am the founder and owner of PRESSYNSTUDIO.CO!{"\n\n"}
+          Pressyn is a place where you can get custom press-on nails designed to suit your style and finesse ✨. DM me on Instagram to begin your journey with us and enjoy the best experience, exclusive deals, and so much more 😉.{"\n\n"}
+          Enjoy beautiful, refined nails from the comfort of your own home! I believe that nails should feel elegant, simple, and elevated — designed to fit seamlessly into everyday outfits and lifestyles while still feeling special. Every set is carefully crafted to achieve a salon-quality look, without the salon 💅💕
         </p>
         <figure className="mt-8 max-w-md mx-auto">
           <img
