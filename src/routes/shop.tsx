@@ -10,9 +10,9 @@ import shop7 from "@/assets/shop-7.png.asset.json";
 import shop8 from "@/assets/shop-8.png.asset.json";
 import shop9 from "@/assets/shop-9.png.asset.json";
 const collectionImages = [
-  { url: shop1.url, name: "Look 01", price: "$50" },
-  { url: shop2.url, name: "Look 02", price: "$50 (no 3D) - $55 (with 3D)" },
-  { url: shop3.url, name: "\n", price: "$40" },
+  { url: shop1.url, name: "'party girl'", price: "$50" },
+  { url: shop2.url, name: "'clean girl'", price: "$40" },
+  { url: shop3.url, name: "'mystical magical'", price: "$50 (no 3D) - $55 (with 3D)" },
   { url: shop4.url, name: "'stripy Bobby'", price: "$45" },
   { url: shop5.url, name: "'dime'", price: "$45" },
   { url: shop6.url, name: "'bit stripey'", price: "$45" },
