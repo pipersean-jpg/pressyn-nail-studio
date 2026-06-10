@@ -27,8 +27,8 @@ function AboutPage() {
         <p className="text-lg leading-relaxed text-foreground/90 whitespace-pre-wrap">
           Hi, My Name Is Elyce! 👋{"\n\n"}
           I am the founder and owner of PRESSYNSTUDIO.CO!{"\n\n"}
-          Pressyn is a place where you can get custom press-on nails designed to suit your style and finesse ✨. DM me on Instagram to begin your journey with us and enjoy the best experience, exclusive deals, and so much more 😉.{"\n\n"}
-          Enjoy beautiful, refined nails from the comfort of your own home! I believe that nails should feel elegant, simple, and elevated — designed to fit seamlessly into everyday outfits and lifestyles while still feeling special. Every set is carefully crafted to achieve a salon-quality look, without the salon 💅💕
+          Pressyn is a place where you can get custom press-on nails designed to suit your style and finesse ✨. DM me on Instagram to begin your journey with us and enjoy the best experience, exclusive deals, and so much more.{"\n\n"}
+          Enjoy beautiful, refined nails from the comfort of your own home! I believe that nails should feel elegant, simple, and elevated — designed to fit seamlessly into everyday outfits and lifestyles while still feeling special. Every set is carefully crafted to achieve a salon-quality look, without the salon💕
         </p>
         <figure className="mt-8 max-w-md mx-auto">
           <img
@@ -43,7 +43,10 @@ function AboutPage() {
           {"\n"}
         </p>
         <p className="mt-6 text-lg leading-relaxed text-foreground/90 whitespace-pre-wrap">
-          welcome ayla to PRESSYNSTUDIO.CO as our model Can’t wait for ayla to have the best experience here with us!! She is getting sent a Pressyn package every month to model and create beautiful content 💅 DM or email me to have this same amazing experience as ayla 🤍🙌&nbsp;{"\n\n\n\n\n\n\n\n"}
+          Welcome, Ayla! 🤍{"\n\n"}
+          Please join us in welcoming Ayla to PRESSYNSTUDIO.CO as our model!{"\n\n"}
+          We can't wait for Ayla to have an amazing experience with us. She will be receiving a Pressyn package every month to model and create beautiful content 💅.{"\n\n"}
+          If you'd love to have the same amazing experience as Ayla, send me a DM or email to learn more about becoming a Pressyn model and content creator 🙌🤍.{"\n\n\n\n\n\n\n\n\n\n"}
         </p>
         <figure className="mt-8 max-w-md mx-auto">
           <img
