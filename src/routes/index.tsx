@@ -5,7 +5,7 @@ import { Layout } from "@/components/Layout";
 import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { fetchProducts } from "@/lib/shopify";
-import heroAsset from "@/assets/hero-nails-new.jpg.asset.json";
+import heroAsset from "@/assets/hero-nails-v3.jpg.asset.json";
 const heroImg = heroAsset.url;
 import best1 from "@/assets/best-1.png.asset.json";
 import best2 from "@/assets/best-2.png.asset.json";
