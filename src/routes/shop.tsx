@@ -10,15 +10,15 @@ import shop7 from "@/assets/shop-7.png.asset.json";
 import shop8 from "@/assets/shop-8.png.asset.json";
 import shop9 from "@/assets/shop-9.png.asset.json";
 const collectionImages = [
-  { url: shop1.url, name: "Look 01", price: "$28" },
-  { url: shop2.url, name: "Look 02", price: "$28" },
-  { url: shop3.url, name: "Look 03", price: "$28" },
-  { url: shop4.url, name: "Look 04", price: "$28" },
-  { url: shop5.url, name: "Look 05", price: "$28" },
-  { url: shop6.url, name: "Look 06", price: "$28" },
-  { url: shop7.url, name: "Look 07", price: "$28" },
-  { url: shop8.url, name: "Look 08", price: "$28" },
-  { url: shop9.url, name: "Look 09", price: "$28" },
+  { url: shop1.url, name: "Look 01", price: "$50" },
+  { url: shop2.url, name: "Look 02", price: "$50 (no 3D) - $55 (with 3D)" },
+  { url: shop3.url, name: "\n", price: "$40" },
+  { url: shop4.url, name: "'stripy Bobby'", price: "$45" },
+  { url: shop5.url, name: "'dime'", price: "$45" },
+  { url: shop6.url, name: "'bit stripey'", price: "$45" },
+  { url: shop7.url, name: "'simple dimple'", price: "$30" },
+  { url: shop8.url, name: "'shimmer and shine'", price: "$35" },
+  { url: shop9.url, name: "'spotty bobby'", price: "$35" },
 ];
 
 export const Route = createFileRoute("/shop")({
