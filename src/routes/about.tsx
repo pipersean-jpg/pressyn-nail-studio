@@ -46,7 +46,7 @@ function AboutPage() {
           Welcome, Ayla! 🤍{"\n\n"}
           Please join us in welcoming Ayla to PRESSYNSTUDIO.CO as our model!{"\n\n"}
           We can't wait for Ayla to have an amazing experience with us. She will be receiving a Pressyn package every month to model and create beautiful content 💅.{"\n\n"}
-          If you'd love to have the same amazing experience as Ayla, send me a DM or email to learn more about becoming a Pressyn model and content creator 🙌🤍.{"\n\n\n\n\n\n\n\n\n\n"}
+          If you'd love to have the same amazing experience as Ayla, send me a DM or email @pressynstudio.co to learn more about becoming a Pressyn model and content creator 🙌🤍.{"\n\n\n\n\n\n\n\n\n\n"}
         </p>
         <figure className="mt-8 max-w-md mx-auto">
           <img
