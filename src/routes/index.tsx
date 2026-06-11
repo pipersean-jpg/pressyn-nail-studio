@@ -117,7 +117,7 @@ function HomePage() {
       {/* REVIEWS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.3em] uppercase text-gold">Reviews</p>
+          <p className="text-xs tracking-[0.3em] uppercase text-gold">QUOTES</p>
           <h2 className="font-display text-4xl sm:text-5xl mt-2 text-primary">Loved by our clients</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -138,7 +138,7 @@ function HomePage() {
                 {Array.from({ length: 5 }).map((_, j) => <Star key={j} className="h-4 w-4 fill-current" />)}
               </div>
               <p className="text-sm text-foreground/90 italic leading-relaxed">"{review.quote}"</p>
-              <p className="mt-4 text-xs tracking-[0.2em] uppercase text-gold">— {review.name}</p>
+              <p className="mt-4 text-xs tracking-[0.2em] uppercase text-gold">{"\n"}</p>
             </div>
           ))}
         </div>
