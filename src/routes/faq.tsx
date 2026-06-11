@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const FAQS = [
   { q: "How long do Pressyn nails last?", a: "With proper application, our press-ons last between 2-4 weeks. Care for them gently and they can be reused multiple times." },
   { q: "Are they damaging to natural nails?", a: "Not at all — unless you take them off incorrectly our adhesive is salon-grade but gentle, and we include both glue and adhesive tabs so you can choose your wear style." },
-  { q: "Can I shower and wash dishes with them on?", a: "Yes. Once fully set, your nails are water-resistant. We recommend gloves for long dishwashing sessions to maximise wear." },
+  { q: "Can I shower and wash dishes with them on?", a: "Yes. Once fully set wait about an hour then your nails are water-resistant. We recommend gloves for long dishwashing sessions to maximise wear." },
   { q: "How do I find my size?", a: "See our Sizing Guide page for a printable measuring template, or order our custom fit set." },
   { q: "Do you offer custom designs?", a: "Yes! Visit our Custom Orders page to submit your dream design." },
   { q: "What's your return policy?", a: "For hygiene reasons we don't accept returns on opened sets, but damaged or incorrect orders are replaced free of charge." },
