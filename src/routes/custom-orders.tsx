@@ -13,7 +13,7 @@ const schema = z.object({
   name: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
   shape: z.enum(["Coffin", "Almond", "Seletto"]),
-  length: z.enum(["Short", "Medium", "Long"]),
+  length: z.enum(["Short", "Long"]),
   design: z.string().trim().min(1).max(2000),
 }).refine((d) => d.shape !== "Seletto" || d.length === "Long", {
   message: "Seletto is available in Long only",
@@ -85,7 +85,6 @@ function CustomPage() {
                 <SelectTrigger id="length"><SelectValue placeholder="Select length" /></SelectTrigger>
                 <SelectContent>
                   <SelectItem value="Short" disabled={form.shape === "Seletto"}>Short</SelectItem>
-                  <SelectItem value="Medium" disabled={form.shape === "Seletto"}>Medium</SelectItem>
                   <SelectItem value="Long">Long</SelectItem>
                 </SelectContent>
               </Select>
