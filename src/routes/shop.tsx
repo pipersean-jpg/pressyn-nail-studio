@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { Layout } from "@/components/Layout";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import shop1 from "@/assets/shop-1.png.asset.json";
 import shop2 from "@/assets/shop-2.png.asset.json";
 import shop3 from "@/assets/shop-3.png.asset.json";
@@ -9,16 +11,120 @@ import shop6 from "@/assets/shop-6.png.asset.json";
 import shop7 from "@/assets/shop-7.png.asset.json";
 import shop8 from "@/assets/shop-8.png.asset.json";
 import shop9 from "@/assets/shop-9.png.asset.json";
-const collectionImages = [
-  { url: shop1.url, name: "'party girl'", price: "$50" },
-  { url: shop2.url, name: "'clean girl'", price: "$40" },
-  { url: shop3.url, name: "'mystical magical'", price: "$50 (no 3D) - $55 (with 3D)" },
-  { url: shop4.url, name: "'stripy Bobby'", price: "$45" },
-  { url: shop5.url, name: "'dime'", price: "$45" },
-  { url: shop6.url, name: "'bit stripey'", price: "$45" },
-  { url: shop7.url, name: "'simple dimple'", price: "$30" },
-  { url: shop8.url, name: "'shimmer and shine'", price: "$35" },
-  { url: shop9.url, name: "'spotty bobby'", price: "$35" },
+type NailItem = {
+  url: string;
+  name: string;
+  price: string;
+  description: string;
+  colors: { name: string; hex: string }[];
+  details: string[];
+};
+const collectionImages: NailItem[] = [
+  {
+    url: shop1.url,
+    name: "'party girl'",
+    price: "$50",
+    description: "Sparkle-forward set made for big nights out. Glitter accents on a soft, polished base.",
+    colors: [
+      { name: "Champagne", hex: "#E8D6B3" },
+      { name: "Rose", hex: "#E8B4C0" },
+      { name: "Silver", hex: "#D9D9D9" },
+    ],
+    details: ["Almond shape", "Medium length", "3D charms available"],
+  },
+  {
+    url: shop2.url,
+    name: "'clean girl'",
+    price: "$40",
+    description: "Sheer, glossy, effortless. The everyday set that goes with everything.",
+    colors: [
+      { name: "Sheer Pink", hex: "#F4D6D6" },
+      { name: "Milky Nude", hex: "#EFE3D8" },
+      { name: "Clear Gloss", hex: "#F8F4F0" },
+    ],
+    details: ["Almond shape", "Short / medium", "Glossy finish"],
+  },
+  {
+    url: shop3.url,
+    name: "'mystical magical'",
+    price: "$50 (no 3D) - $55 (with 3D)",
+    description: "Ethereal pearl shimmer with optional 3D charms for a dreamier finish.",
+    colors: [
+      { name: "Pearl", hex: "#F1E9DB" },
+      { name: "Lavender", hex: "#D6C7E6" },
+      { name: "Iridescent", hex: "#E0D7EA" },
+    ],
+    details: ["Almond shape", "Medium / long", "Optional 3D charms"],
+  },
+  {
+    url: shop4.url,
+    name: "'stripy Bobby'",
+    price: "$45",
+    description: "Hand-painted stripes for a playful retro touch. Bold but wearable.",
+    colors: [
+      { name: "Red & White", hex: "#D7423B" },
+      { name: "Black & White", hex: "#1A1A1A" },
+      { name: "Pink & White", hex: "#E8A6B5" },
+    ],
+    details: ["Square shape", "Short / medium", "Hand-painted"],
+  },
+  {
+    url: shop5.url,
+    name: "'dime'",
+    price: "$45",
+    description: "Subtle elegance with delicate gold detailing. A million-dollar look.",
+    colors: [
+      { name: "Gold", hex: "#C9A24B" },
+      { name: "Nude + Gold", hex: "#E5C9A8" },
+    ],
+    details: ["Almond shape", "Medium length", "Gold accents"],
+  },
+  {
+    url: shop6.url,
+    name: "'bit stripey'",
+    price: "$45",
+    description: "A softer take on stripes — fine lines on a clean nude base.",
+    colors: [
+      { name: "Nude + White", hex: "#EBD7C7" },
+      { name: "Nude + Black", hex: "#D1B8A6" },
+    ],
+    details: ["Almond shape", "Short / medium", "Fine line work"],
+  },
+  {
+    url: shop7.url,
+    name: "'simple dimple'",
+    price: "$30",
+    description: "The classic. One color, perfectly applied. Timeless and refined.",
+    colors: [
+      { name: "Nude", hex: "#E8C9B0" },
+      { name: "Soft Pink", hex: "#F2CFD0" },
+      { name: "French", hex: "#F8F4F0" },
+    ],
+    details: ["Any shape", "Any length", "Solid color"],
+  },
+  {
+    url: shop8.url,
+    name: "'shimmer and shine'",
+    price: "$35",
+    description: "Soft chrome shimmer that catches the light from every angle.",
+    colors: [
+      { name: "Pearl Chrome", hex: "#EDE3D2" },
+      { name: "Rose Chrome", hex: "#E9C5C9" },
+      { name: "Silver Chrome", hex: "#D4D4D8" },
+    ],
+    details: ["Almond shape", "Medium length", "Chrome finish"],
+  },
+  {
+    url: shop9.url,
+    name: "'spotty bobby'",
+    price: "$35",
+    description: "Playful polka dots, hand-painted for a fun everyday set.",
+    colors: [
+      { name: "Nude + Black dots", hex: "#1A1A1A" },
+      { name: "White + Pink dots", hex: "#E8A6B5" },
+    ],
+    details: ["Square shape", "Short / medium", "Hand-painted"],
+  },
 ];
 
 export const Route = createFileRoute("/shop")({
@@ -35,6 +141,8 @@ export const Route = createFileRoute("/shop")({
 });
 
 function ShopPage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const active = openIndex !== null ? collectionImages[openIndex] : null;
   return (
     <Layout>
       <section className="bg-blush/20 border-b border-border/60">
@@ -49,7 +157,13 @@ function ShopPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-8">
           {collectionImages.map((item, i) => (
-            <div key={i} className="group">
+            <button
+              key={i}
+              type="button"
+              onClick={() => setOpenIndex(i)}
+              className="group text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-lg"
+              aria-label={`View details for ${item.name}`}
+            >
               <div className="aspect-square overflow-hidden rounded-lg bg-blush/30">
                 <img
                   src={item.url}
@@ -61,11 +175,50 @@ function ShopPage() {
               <div className="mt-3 text-center">
                 <p className="font-display text-lg text-primary">{item.name}</p>
                 <p className="text-sm text-muted-foreground mt-1">{item.price}</p>
+                <p className="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold opacity-0 group-hover:opacity-100 transition-opacity">Tap for details</p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </section>
+      <Dialog open={openIndex !== null} onOpenChange={(o) => !o && setOpenIndex(null)}>
+        <DialogContent className="max-w-2xl">
+          {active && (
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="aspect-square overflow-hidden rounded-lg bg-blush/30">
+                <img src={active.url} alt={active.name} className="h-full w-full object-cover" />
+              </div>
+              <div>
+                <DialogHeader>
+                  <DialogTitle className="font-display text-3xl text-primary text-left">{active.name}</DialogTitle>
+                  <DialogDescription className="text-left text-base text-foreground/80 mt-1">{active.price}</DialogDescription>
+                </DialogHeader>
+                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{active.description}</p>
+                <div className="mt-5">
+                  <p className="text-[10px] tracking-[0.25em] uppercase text-gold mb-2">Colours</p>
+                  <div className="flex flex-wrap gap-2">
+                    {active.colors.map((c) => (
+                      <div key={c.name} className="flex items-center gap-2 border border-border/60 rounded-full pl-1 pr-3 py-1">
+                        <span className="h-5 w-5 rounded-full border border-border/60" style={{ backgroundColor: c.hex }} />
+                        <span className="text-xs">{c.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-5">
+                  <p className="text-[10px] tracking-[0.25em] uppercase text-gold mb-2">Details</p>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    {active.details.map((d) => (
+                      <li key={d}>✦ {d}</li>
+                    ))}
+                  </ul>
+                </div>
+                <p className="mt-6 text-xs text-muted-foreground">DM @pressynstudio.co on Instagram to order this set.</p>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </Layout>
   );
 }
