@@ -114,19 +114,31 @@ function HomePage() {
         </div>
       </section>
 
-      {/* REVIEWS PLACEHOLDER */}
+      {/* REVIEWS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <p className="text-xs tracking-[0.3em] uppercase text-gold">Reviews</p>
           <h2 className="font-display text-4xl sm:text-5xl mt-2 text-primary">Loved by our clients</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {[0, 1, 2].map((i) => (
-            <div key={i} className="rounded-lg border border-border/60 p-8 bg-card text-center">
-              <div className="flex justify-center gap-1 mb-4 text-gold/50">
-                {Array.from({ length: 5 }).map((_, j) => <Star key={j} className="h-4 w-4" />)}
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {[
+            { name: "Chloe", quote: "Everyone's happier with pretty nails." },
+            { name: "Mia", quote: "A girl should be two things: classy and fabulous — starting with her nails." },
+            { name: "Sophie", quote: "Life is too short to have boring nails." },
+            { name: "Ava", quote: "Nails take whatever you're wearing to the next level." },
+            { name: "Zara", quote: "Pretty nails make me feel like I have my life together." },
+            { name: "Lily", quote: "When your nails are on point, your whole day is on point." },
+            { name: "Isla", quote: "Good nails don't lie." },
+            { name: "Ella", quote: "You can't buy happiness, but you can buy press-ons and that's kind of the same thing." },
+            { name: "Ruby", quote: "My nails are my best accessory." },
+            { name: "Hannah", quote: "New nails, new mood, new me." },
+          ].map((review, i) => (
+            <div key={i} className="rounded-lg border border-border/60 p-6 bg-card text-center">
+              <div className="flex justify-center gap-1 mb-4 text-gold">
+                {Array.from({ length: 5 }).map((_, j) => <Star key={j} className="h-4 w-4 fill-current" />)}
               </div>
-              <p className="text-sm text-muted-foreground">No reviews yet — be the first to share your Pressyn experience.</p>
+              <p className="text-sm text-foreground/90 italic leading-relaxed">"{review.quote}"</p>
+              <p className="mt-4 text-xs tracking-[0.2em] uppercase text-gold">— {review.name}</p>
             </div>
           ))}
         </div>
