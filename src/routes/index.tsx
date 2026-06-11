@@ -120,7 +120,7 @@ function HomePage() {
           <p className="text-xs tracking-[0.3em] uppercase text-gold">Reviews</p>
           <h2 className="font-display text-4xl sm:text-5xl mt-2 text-primary">Loved by our clients</h2>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {[
             { name: "Chloe", quote: "Everyone's happier with pretty nails." },
             { name: "Mia", quote: "A girl should be two things: classy and fabulous — starting with her nails." },
