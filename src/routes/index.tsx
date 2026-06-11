@@ -144,19 +144,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* INSTAGRAM */}
-      <section className="bg-blush/20 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xs tracking-[0.3em] uppercase text-gold">@pressynstudio.co</p>
-          <h2 className="font-display text-4xl sm:text-5xl mt-2 text-primary">Follow the studio</h2>
-          <p className="mt-3 text-muted-foreground">Tag us with #PressynStudio for a chance to be featured.</p>
-          <div className="mt-10 grid grid-cols-3 md:grid-cols-6 gap-3">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="aspect-square rounded-md bg-gradient-to-br from-blush/60 to-nude/60 hover:scale-105 transition-transform" />
-            ))}
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 }
