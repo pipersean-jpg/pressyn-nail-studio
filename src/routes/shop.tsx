@@ -64,11 +64,9 @@ const collectionImages: NailItem[] = [
     price: "$45",
     description: "Hand-painted stripes for a playful retro touch. Bold but wearable.",
     colors: [
-      { name: "Red & White", hex: "#D7423B" },
-      { name: "Black & White", hex: "#1A1A1A" },
-      { name: "Pink & White", hex: "#E8A6B5" },
+      { name: "one colour", hex: "#1A1A1A" },
     ],
-    details: ["Square shape", "Short / medium", "Hand-painted"],
+    details: ["almond shape", "Short / long", "Hand-painted"],
   },
   {
     url: shop5.url,
