@@ -53,9 +53,8 @@ const collectionImages: NailItem[] = [
     price: "$45 (no 3D) - $50 (with 3D)",
     description: "Ethereal pearl shimmer with optional 3D charms for a dreamier finish.",
     colors: [
-      { name: "pink", hex: "#F1E9DB" },
-      { name: "light blue+dark blue", hex: "#D6C7E6" },
-      { name: "", hex: "#E0D7EA" },
+      { name: "pink", hex: "#F4A6B5" },
+      { name: "light blue+dark blue", hex: "#87CEEB" },
     ],
     details: ["Almond shape", "short / long", "Optional 3D flowers"],
   },
