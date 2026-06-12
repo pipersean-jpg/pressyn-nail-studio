@@ -52,7 +52,7 @@ const collectionImages: NailItem[] = [
   {
     url: shop3.url,
     name: "'mystical magical'",
-    price: "$50 (no 3D) - $55 (with 3D)",
+    price: "$45 (no 3D) - $50 (with 3D)",
     description: "Ethereal pearl shimmer with optional 3D charms for a dreamier finish.",
     colors: [
       { name: "Pearl", hex: "#F1E9DB" },
