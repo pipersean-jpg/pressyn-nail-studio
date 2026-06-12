@@ -147,7 +147,29 @@ export const Route = createFileRoute("/shop")({
 
 function ShopPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const addItem = useLocalCartStore((s) => s.addItem);
   const active = openIndex !== null ? collectionImages[openIndex] : null;
+
+  const handleOpen = (i: number) => {
+    setOpenIndex(i);
+    setSelectedColor(collectionImages[i].colors[0]?.name ?? null);
+  };
+
+  const handleAdd = () => {
+    if (!active || openIndex === null) return;
+    addItem({
+      id: String(openIndex),
+      name: active.name,
+      price: active.price,
+      image: active.url,
+      color: selectedColor ?? undefined,
+    });
+    toast.success("Added to bag", { description: active.name, position: "top-center" });
+    setOpenIndex(null);
+    navigate({ to: "/cart" });
+  };
   return (
     <Layout>
       <section className="bg-blush/20 border-b border-border/60">
