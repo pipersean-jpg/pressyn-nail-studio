@@ -33,7 +33,7 @@ const collectionImages: NailItem[] = [
     colors: [
       { name: "one colour and design", hex: "#E8D6B3" },
     ],
-    details: ["Almond shape", "Medium length", "3D charms available"],
+    details: ["Almond shape", "short or long length"],
   },
   {
     url: shop2.url,
@@ -80,7 +80,7 @@ const collectionImages: NailItem[] = [
       { name: "Gold", hex: "#C9A24B" },
       { name: "Nude + Gold", hex: "#E5C9A8" },
     ],
-    details: ["Almond shape", "Medium length", "Gold accents"],
+    details: ["Almond shape", "short or long length", "Gold accents"],
   },
   {
     url: shop6.url,
@@ -115,7 +115,7 @@ const collectionImages: NailItem[] = [
       { name: "Rose Chrome", hex: "#E9C5C9" },
       { name: "Silver Chrome", hex: "#D4D4D8" },
     ],
-    details: ["Almond shape", "Medium length", "Chrome finish"],
+    details: ["Almond shape", "short or long length", "Chrome finish"],
   },
   {
     url: shop9.url,
@@ -238,7 +238,7 @@ function ShopPage() {
                 <div className="mt-5">
                   <p className="text-[10px] tracking-[0.25em] uppercase text-gold mb-2">Details</p>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    {active.details.map((d) => (
+                    {active.details.filter(d => d.trim() !== "").map((d) => (
                       <li key={d}>✦ {d}</li>
                     ))}
                   </ul>
