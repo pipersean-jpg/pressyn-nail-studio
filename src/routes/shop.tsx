@@ -31,7 +31,7 @@ const collectionImages: NailItem[] = [
     price: "$50",
     description: "Sparkle-forward set made for big nights out. Glitter accents on a soft, polished base.",
     colors: [
-      { name: "Champagne", hex: "#E8D6B3" },
+      { name: "one colour and design", hex: "#E8D6B3" },
       { name: "Rose", hex: "#E8B4C0" },
       { name: "Silver", hex: "#D9D9D9" },
     ],
