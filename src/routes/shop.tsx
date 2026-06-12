@@ -2,6 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Layout } from "@/components/Layout";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "@tanstack/react-router";
+import { useLocalCartStore } from "@/stores/localCartStore";
+import { toast } from "sonner";
+import { ShoppingBag } from "lucide-react";
 import shop1 from "@/assets/shop-1.png.asset.json";
 import shop2 from "@/assets/shop-2.png.asset.json";
 import shop3 from "@/assets/shop-3.png.asset.json";
@@ -142,7 +147,29 @@ export const Route = createFileRoute("/shop")({
 
 function ShopPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const addItem = useLocalCartStore((s) => s.addItem);
   const active = openIndex !== null ? collectionImages[openIndex] : null;
+
+  const handleOpen = (i: number) => {
+    setOpenIndex(i);
+    setSelectedColor(collectionImages[i].colors[0]?.name ?? null);
+  };
+
+  const handleAdd = () => {
+    if (!active || openIndex === null) return;
+    addItem({
+      id: String(openIndex),
+      name: active.name,
+      price: active.price,
+      image: active.url,
+      color: selectedColor ?? undefined,
+    });
+    toast.success("Added to bag", { description: active.name, position: "top-center" });
+    setOpenIndex(null);
+    navigate({ to: "/cart" });
+  };
   return (
     <Layout>
       <section className="bg-blush/20 border-b border-border/60">
@@ -160,7 +187,7 @@ function ShopPage() {
             <button
               key={i}
               type="button"
-              onClick={() => setOpenIndex(i)}
+              onClick={() => handleOpen(i)}
               className="group text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-lg"
               aria-label={`View details for ${item.name}`}
             >
@@ -198,10 +225,15 @@ function ShopPage() {
                   <p className="text-[10px] tracking-[0.25em] uppercase text-gold mb-2">Colours</p>
                   <div className="flex flex-wrap gap-2">
                     {active.colors.map((c) => (
-                      <div key={c.name} className="flex items-center gap-2 border border-border/60 rounded-full pl-1 pr-3 py-1">
+                      <button
+                        type="button"
+                        key={c.name}
+                        onClick={() => setSelectedColor(c.name)}
+                        className={`flex items-center gap-2 border rounded-full pl-1 pr-3 py-1 transition-colors ${selectedColor === c.name ? "border-gold bg-blush/30" : "border-border/60 hover:border-foreground/40"}`}
+                      >
                         <span className="h-5 w-5 rounded-full border border-border/60" style={{ backgroundColor: c.hex }} />
                         <span className="text-xs">{c.name}</span>
-                      </div>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -213,7 +245,10 @@ function ShopPage() {
                     ))}
                   </ul>
                 </div>
-                <p className="mt-6 text-xs text-muted-foreground">DM @pressynstudio.co on Instagram to order this set.</p>
+                <Button onClick={handleAdd} className="w-full mt-6 bg-primary text-primary-foreground hover:bg-primary/90" size="lg">
+                  <ShoppingBag className="h-4 w-4 mr-2" /> Add to bag
+                </Button>
+                <p className="mt-3 text-xs text-muted-foreground text-center">DM @pressynstudio.co on Instagram to finalise your order.</p>
               </div>
             </div>
           )}

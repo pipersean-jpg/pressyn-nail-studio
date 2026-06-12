@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { CartDrawer } from "./CartDrawer";
+import { Menu, X, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocalCartStore } from "@/stores/localCartStore";
+import { Badge } from "@/components/ui/badge";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -16,6 +17,7 @@ const NAV = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const totalItems = useLocalCartStore((s) => s.items.reduce((acc, i) => acc + i.quantity, 0));
   return (
     <header className="sticky top-0 z-40 bg-background/85 backdrop-blur-md border-b border-border/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +39,16 @@ export function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-2">
-            <CartDrawer />
+            <Link to="/cart" aria-label="View bag">
+              <Button variant="ghost" size="icon" className="relative hover:bg-blush/40">
+                <ShoppingBag className="h-5 w-5" />
+                {totalItems > 0 && (
+                  <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-primary text-primary-foreground">
+                    {totalItems}
+                  </Badge>
+                )}
+              </Button>
+            </Link>
             <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setOpen((v) => !v)}>
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
