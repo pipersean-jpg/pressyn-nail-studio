@@ -41,11 +41,11 @@ const collectionImages: NailItem[] = [
     price: "$40",
     description: "Sheer, glossy, effortless. The everyday set that goes with everything.",
     colors: [
-      { name: "Sheer Pink", hex: "#F4D6D6" },
-      { name: "Milky Nude", hex: "#EFE3D8" },
-      { name: "Clear Gloss", hex: "#F8F4F0" },
+      { name: "pink - white polkadots", hex: "#F4D6D6" },
+      { name: "YOUR OWN COLOUR", hex: "#EFE3D8" },
+      { name: "white - black polkadots", hex: "#F8F4F0" },
     ],
-    details: ["Almond shape", "Short / medium", "Glossy finish"],
+    details: ["Almond shape", "Short / long", "Glossy finish"],
   },
   {
     url: shop3.url,
