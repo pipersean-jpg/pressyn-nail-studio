@@ -187,7 +187,7 @@ function ShopPage() {
             <button
               key={i}
               type="button"
-              onClick={() => setOpenIndex(i)}
+              onClick={() => handleOpen(i)}
               className="group text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-lg"
               aria-label={`View details for ${item.name}`}
             >
