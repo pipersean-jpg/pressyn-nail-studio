@@ -225,10 +225,15 @@ function ShopPage() {
                   <p className="text-[10px] tracking-[0.25em] uppercase text-gold mb-2">Colours</p>
                   <div className="flex flex-wrap gap-2">
                     {active.colors.map((c) => (
-                      <div key={c.name} className="flex items-center gap-2 border border-border/60 rounded-full pl-1 pr-3 py-1">
+                      <button
+                        type="button"
+                        key={c.name}
+                        onClick={() => setSelectedColor(c.name)}
+                        className={`flex items-center gap-2 border rounded-full pl-1 pr-3 py-1 transition-colors ${selectedColor === c.name ? "border-gold bg-blush/30" : "border-border/60 hover:border-foreground/40"}`}
+                      >
                         <span className="h-5 w-5 rounded-full border border-border/60" style={{ backgroundColor: c.hex }} />
                         <span className="text-xs">{c.name}</span>
-                      </div>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -240,7 +245,10 @@ function ShopPage() {
                     ))}
                   </ul>
                 </div>
-                <p className="mt-6 text-xs text-muted-foreground">DM @pressynstudio.co on Instagram to order this set.</p>
+                <Button onClick={handleAdd} className="w-full mt-6 bg-primary text-primary-foreground hover:bg-primary/90" size="lg">
+                  <ShoppingBag className="h-4 w-4 mr-2" /> Add to bag
+                </Button>
+                <p className="mt-3 text-xs text-muted-foreground text-center">DM @pressynstudio.co on Instagram to finalise your order.</p>
               </div>
             </div>
           )}
