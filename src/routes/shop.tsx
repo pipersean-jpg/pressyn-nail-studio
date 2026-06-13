@@ -74,8 +74,8 @@ const collectionImages: NailItem[] = [
     price: "$45",
     description: "Subtle elegance with delicate gold detailing. A million-dollar look.",
     colors: [
-      { name: "blue swirl", hex: "#ADD8E6" },
-      { name: "pink swirl", hex: "#FFB6C1" },
+      { name: "blue swirl", hex: "#4A90E2" },
+      { name: "pink swirl", hex: "#F06292" },
     ],
     details: ["Almond shape", "short or long length", "bloom work"],
   },
