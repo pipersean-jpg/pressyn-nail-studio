@@ -86,9 +86,9 @@ const collectionImages: NailItem[] = [
     description: "A softer take on stripes — fine lines on a clean nude base.",
     colors: [
       { name: "Nude + White", hex: "#EBD7C7" },
-      { name: "Nude + Black", hex: "#D1B8A6" },
+      { name: "blue", hex: "#4A90E2" },
     ],
-    details: ["Almond shape", "Short / medium", "Fine line work"],
+    details: ["Almond shape", "Short / long", "Fine line work"],
   },
   {
     url: shop7.url,
@@ -123,7 +123,7 @@ const collectionImages: NailItem[] = [
       { name: "Nude + Black dots", hex: "#1A1A1A" },
       { name: "White + Pink dots", hex: "#E8A6B5" },
     ],
-    details: ["Square shape", "Short / medium", "Hand-painted"],
+    details: ["Square shape", "Short / long", "Hand-painted"],
   },
 ];
 
