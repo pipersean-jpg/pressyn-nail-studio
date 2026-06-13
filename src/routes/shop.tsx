@@ -123,7 +123,7 @@ const collectionImages: NailItem[] = [
       { name: "Nude + Black dots", hex: "#1A1A1A" },
       { name: "White + Pink dots", hex: "#E8A6B5" },
     ],
-    details: ["Square shape", "Short / medium", "Hand-painted"],
+    details: ["Square shape", "Short / long", "Hand-painted"],
   },
 ];
 
