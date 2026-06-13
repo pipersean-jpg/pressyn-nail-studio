@@ -87,6 +87,7 @@ const collectionImages: NailItem[] = [
     colors: [
       { name: "Nude + White", hex: "#EBD7C7" },
       { name: "blue", hex: "#4A90E2" },
+      { name: "pink", hex: "#F06292" },
     ],
     details: ["Almond shape", "Short / long", "Fine line work"],
   },
