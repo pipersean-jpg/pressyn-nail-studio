@@ -97,9 +97,6 @@ const collectionImages: NailItem[] = [
     price: "$30",
     description: "The classic. One color, perfectly applied. Timeless and refined.",
     colors: [
-      { name: "\n", hex: "#E8C9B0" },
-      { name: "Soft Pink", hex: "#F2CFD0" },
-      { name: "French", hex: "#F8F4F0" },
       { name: "brown", hex: "#8B4513" },
       { name: "yellow", hex: "#FFD700" },
       { name: "blue", hex: "#4A90E2" },
