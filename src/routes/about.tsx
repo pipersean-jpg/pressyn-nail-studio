@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import elyceAsset from "@/assets/elyce.png.asset.json";
-import aylaAsset from "@/assets/ayla.png.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -42,18 +42,6 @@ function AboutPage() {
         <p className="mt-6 text-lg leading-relaxed text-foreground/90">
           {"\n"}
         </p>
-        <p className="mt-6 text-lg leading-relaxed text-foreground/90 whitespace-pre-wrap">
-          {"\n\n\n\n\n\n\n\n\n\n"}
-        </p>
-        <figure className="mt-8 max-w-md mx-auto">
-          <img
-            src={aylaAsset.url}
-            alt="Ayla, Pressynstudio.co model"
-            className="w-full rounded-2xl shadow-xl object-cover"
-            loading="lazy"
-          />
-          <figcaption className="mt-3 text-center text-xs tracking-[0.25em] uppercase text-gold">{"\n"}</figcaption>
-        </figure>
       </section>
     </Layout>
   );
