@@ -76,7 +76,7 @@ function ContactPage() {
           </div>
           <div className="flex items-start gap-3">
             <MapPin className="h-5 w-5 text-gold mt-0.5" />
-            <div><p className="font-medium">Studio</p><p className="text-muted-foreground">Online — shipping worldwide</p></div>
+            <div><p className="font-medium">{"\n"}</p><p className="text-muted-foreground">{"\n"}</p></div>
           </div>
         </div>
       </section>
