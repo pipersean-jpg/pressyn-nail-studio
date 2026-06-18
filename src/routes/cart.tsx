@@ -34,7 +34,6 @@ function CartPage() {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {items.length === 0 ? (
           <div className="text-center py-20">
-            <ShoppingBag className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
             <p className="text-muted-foreground mb-6">Your bag is empty.</p>
             <Link to="/shop">
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Browse the collection</Button>
