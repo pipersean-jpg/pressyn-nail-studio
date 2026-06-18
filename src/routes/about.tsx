@@ -52,7 +52,7 @@ function AboutPage() {
             className="w-full rounded-2xl shadow-xl object-cover"
             loading="lazy"
           />
-          <figcaption className="mt-3 text-center text-xs tracking-[0.25em] uppercase text-gold">Ayla — Model</figcaption>
+          <figcaption className="mt-3 text-center text-xs tracking-[0.25em] uppercase text-gold">{"\n"}</figcaption>
         </figure>
       </section>
     </Layout>
