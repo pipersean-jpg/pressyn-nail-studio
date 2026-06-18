@@ -79,7 +79,7 @@ function CartPage() {
                 To finalise your order, DM <span className="text-foreground">@pressynstudio.co</span> on Instagram with your bag.
               </p>
               <Button className="w-full mt-6 bg-primary text-primary-foreground hover:bg-primary/90">
-                <a href="https://instagram.com/pressynstudio.co" target="_blank" rel="noreferrer">Message to order</a>
+                <a href="https://www.instagram.com/pressynstudio.co/" target="_blank" rel="noreferrer">Message to order</a>
               </Button>
             </aside>
           </div>
