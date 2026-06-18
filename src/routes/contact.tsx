@@ -46,7 +46,7 @@ function ContactPage() {
         <div className="max-w-4xl mx-auto px-4 py-20 text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-gold">Say Hi</p>
           <h1 className="font-display text-5xl sm:text-6xl mt-3 text-primary">Contact</h1>
-          <p className="mt-4 text-muted-foreground">We usually reply within 24 hours.</p>
+          <p className="mt-4 text-muted-foreground">We usually reply within 24 - 48 hours.</p>
         </div>
       </section>
       <section className="max-w-5xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12">
