@@ -33,7 +33,7 @@ function SizingPage() {
             <li>lastly send your photos to pressynstoudio.co on instagram.</li>
           </ol>
           <Button size="lg" className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-            <a href="#" onClick={(e) => e.preventDefault()}>
+            <a href={measuringGuideAsset.url} download="pressynstudio-measuring-guide.jpg">
               <Download className="h-4 w-4 mr-2" /> Download Measuring Guide
             </a>
           </Button>
