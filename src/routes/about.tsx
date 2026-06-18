@@ -43,10 +43,7 @@ function AboutPage() {
           {"\n"}
         </p>
         <p className="mt-6 text-lg leading-relaxed text-foreground/90 whitespace-pre-wrap">
-          Welcome, Ayla! 🤍{"\n\n"}
-          Please join us in welcoming Ayla to PRESSYNSTUDIO.CO as our model!{"\n\n"}
-          We can't wait for Ayla to have an amazing experience with us. She will be receiving a Pressyn package every month to model and create beautiful content 💅.{"\n\n"}
-          If you'd love to have the same amazing experience as Ayla, send me a DM or email @pressynstudio.co to learn more about becoming a Pressyn model and content creator 🙌🤍.{"\n\n\n\n\n\n\n\n\n\n"}
+          {"\n\n\n\n\n\n\n\n\n\n"}
         </p>
         <figure className="mt-8 max-w-md mx-auto">
           <img
@@ -55,7 +52,7 @@ function AboutPage() {
             className="w-full rounded-2xl shadow-xl object-cover"
             loading="lazy"
           />
-          <figcaption className="mt-3 text-center text-xs tracking-[0.25em] uppercase text-gold">Ayla — Model</figcaption>
+          <figcaption className="mt-3 text-center text-xs tracking-[0.25em] uppercase text-gold">{"\n"}</figcaption>
         </figure>
       </section>
     </Layout>
