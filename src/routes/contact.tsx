@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Instagram, MapPin } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 import { toast } from "sonner";
 
 const schema = z.object({
@@ -73,10 +73,6 @@ function ContactPage() {
           <div className="flex items-start gap-3">
             <Instagram className="h-5 w-5 text-gold mt-0.5" />
             <div><p className="font-medium">Instagram</p><p className="text-muted-foreground">@pressynstudio.co</p></div>
-          </div>
-          <div className="flex items-start gap-3">
-            <MapPin className="h-5 w-5 text-gold mt-0.5" />
-            <div><p className="font-medium">{"\n"}</p><p className="text-muted-foreground">{"\n"}</p></div>
           </div>
         </div>
       </section>
