@@ -114,8 +114,8 @@ const collectionImages: NailItem[] = [
     description: "Soft chrome shimmer that catches the light from every angle.",
     colors: [
       { name: "Pearl Chrome", hex: "#EDE3D2" },
-      { name: "Rose Chrome", hex: "#E9C5C9" },
-      { name: "Silver Chrome", hex: "#D4D4D8" },
+      { name: "\n", hex: "#E9C5C9" },
+      { name: "\n", hex: "#D4D4D8" },
     ],
     details: ["Almond shape", "short or long length", "Chrome finish"],
   },
