@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import measuringGuideAsset from "@/assets/measuring-guide.jpg.asset.json";
 
 export const Route = createFileRoute("/sizing")({
   head: () => ({
