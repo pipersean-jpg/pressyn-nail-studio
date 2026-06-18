@@ -125,10 +125,10 @@ const collectionImages: NailItem[] = [
     price: "$35",
     description: "Playful polka dots, hand-painted for a fun everyday set.",
     colors: [
-      { name: "Nude + Black dots", hex: "#C8A882" },
-      { name: "White + Pink dots", hex: "#F8F4F0" },
+      { name: "Nude + white dots", hex: "#C8A882" },
+      { name: "nude + Pink dots", hex: "#F8F4F0" },
     ],
-    details: ["Square shape", "Short / long", "Hand-painted"],
+    details: ["almond shape", "Short / long", "Hand-painted"],
   },
 ];
 
