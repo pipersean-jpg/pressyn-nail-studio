@@ -74,7 +74,6 @@ function ContactPage() {
             <Instagram className="h-5 w-5 text-gold mt-0.5" />
             <div><p className="font-medium">Instagram</p><p className="text-muted-foreground">@pressynstudio.co</p></div>
           </div>
-          </div>
         </div>
       </section>
     </Layout>
