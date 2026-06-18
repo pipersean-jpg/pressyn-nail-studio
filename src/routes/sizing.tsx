@@ -27,10 +27,9 @@ function SizingPage() {
         <div>
           <h2 className="font-display text-3xl text-primary">How to measure</h2>
           <ol className="mt-4 space-y-3 text-foreground/90 list-decimal pl-5">
-            <li>Wrap a strip of paper around the widest part of each nail.</li>
-            <li>Mark where the paper meets and measure in millimetres.</li>
-            <li>Match each finger to the size chart in the kit.</li>
-            <li>When in doubt, size down for the most flattering fit.</li>
+            <li>Grab a $1-$2 coin and place it next to your first four figures.</li>
+            <li>next take a photo, then do the same with your thumb.</li>
+            <li>lastly send your photos to pressynstoudio.co on instagram.</li>
           </ol>
           <Button size="lg" className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
             <a href="#" onClick={(e) => e.preventDefault()}>
