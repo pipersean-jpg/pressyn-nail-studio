@@ -14,7 +14,7 @@ export function Footer() {
             <a href="https://instagram.com" target="_blank" rel="noreferrer" className="h-9 w-9 rounded-full bg-blush/60 flex items-center justify-center hover:bg-gold/40 transition-colors">
               <Instagram className="h-4 w-4" />
             </a>
-            <a href="mailto:hello@pressynstudio.co" className="h-9 w-9 rounded-full bg-blush/60 flex items-center justify-center hover:bg-gold/40 transition-colors">
+            <a href="mailto:pressyn.studio@gmail.com" className="h-9 w-9 rounded-full bg-blush/60 flex items-center justify-center hover:bg-gold/40 transition-colors">
               <Mail className="h-4 w-4" />
             </a>
           </div>
